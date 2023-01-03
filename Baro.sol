@@ -6,11 +6,11 @@ import "@openzeppelin/contracts@4.8.0/token/ERC20/extensions/ERC20Burnable.sol";
 import "@openzeppelin/contracts@4.8.0/security/Pausable.sol";
 import "@openzeppelin/contracts@4.8.0/access/AccessControl.sol";
 
-contract BaroCapital is ERC20, ERC20Burnable, Pausable, AccessControl {
+contract Baro is ERC20, ERC20Burnable, Pausable, AccessControl {
     bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
 
-    constructor() ERC20("BaroCapital", "baro") {
+    constructor() ERC20("Baro", "Baro") {
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _grantRole(PAUSER_ROLE, msg.sender);
         _grantRole(MINTER_ROLE, msg.sender);
